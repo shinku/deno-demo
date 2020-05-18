@@ -1,10 +1,9 @@
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+//import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import {oak} from './lib/index.ts';
 import { index } from "./controllers/index.ts";
 import _static from "./utils/static.ts";
 //console.log({static});
-const books = new Map<string, any>();
-
-
+const { Application, Router } = oak;
 const router = new Router();
 
 router
