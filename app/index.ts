@@ -6,7 +6,7 @@ const { Application, Router } = oak;
 const router = new Router();
 router
   .get("/", (context) => {
-    context.response.body = "Hello shin 1212121!";
+    context.response.body = "Hello shin 12121212434";
   })
   const app = new Application();
 app.use(router.routes());
@@ -14,4 +14,3 @@ app.use(router.allowedMethods());
 app.use(_static);
 console.log('start at point :8000');
 app.listen({ port: 8000 });
-

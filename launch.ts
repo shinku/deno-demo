@@ -1,15 +1,17 @@
 
 
  const run = ()=>{
+
      let _process = Deno.run({
         cmd: ["deno", "run","--allow-net","--allow-read","index.ts"],
         cwd:"app",
         env:{"env":"development"},
-        stdout: "piped",
+        //stdout: "piped",
      });
+     //console.log(_process.status());
      return _process;
  }
- let _porcess = run();
+let _porcess = run();
 const watcher = Deno.watchFs("./app");
 for await (const event of watcher) {
      // { kind: "create", paths: [ "/foo.txt" ] }
